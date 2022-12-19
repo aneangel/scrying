@@ -1,5 +1,5 @@
-
-# import secret
+from secrets import API_key
+from secrets import URL_sign
 import requests
 
 # print(secret.API_key)
@@ -7,20 +7,20 @@ import requests
 
 # #gmaps = Client(key = 'API_Key')
 
-# lat = 37.9094
-# lng = 122.6864
+lat = 37.9094
+lng = 122.6864
+fv = 80
+pitch = 0
 
-# x,y = 400,400
-# size = (x,y)
+for h in range(0, 360, 45):
+    heading = h
+    # add time buffer for API
 
-# #for h in range(0, 360, 45):
-# #   heading  = h
-# # add time buffer for API
+url = "https://maps.googleapis.com/maps/api/streetview?size={size}&location={lattitude},{longitude}&fov={fv}&heading={heading}&pitch={pitch}&key={API_key}&signature={URL_sign}".format(
+    size=0, lattitude=lat, longitude=lng, fov=fv, heading=heading, pitch=pitch, API_key=API_key, URL_sign=URL_sign)
 
-# url = "https://maps.googleapis.com/maps/api/streetview?size=size&location=lat,lng&fov=80&heading=heading&pitch=0&key=API_key&signature=URL_sign"
 # # url = 'https://smrghsh.github.io/360img/images/test.png'
 
-# # urllib.request.urlretrieve(url, "local-filename.jpg")
 
 # URL of the image to be downloaded
 IMAGE_URL = "https://smrghsh.github.io/360img/images/test.png"
