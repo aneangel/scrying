@@ -1,17 +1,10 @@
-#360-img-viewer
-# import urllib.request
-import secret
+
+# import secret
 import requests
 
-print(secret.API_key)
-print(secret.URL_sign)
-# from googlemaps import Client
-# import googlemaps
-# from googlemaps import convert
+# print(secret.API_key)
+# print(secret.URL_sign)
 
-
-# API_key = 'AIzaSyAx4IWLaPkokkFsI3lxC4-gGzohmlaqUYc'
-# URL_sign = 'Bmo5bTmryPDHnkGWrIpLUyYgC7k='
 # #gmaps = Client(key = 'API_Key')
 
 # lat = 37.9094
@@ -29,15 +22,12 @@ print(secret.URL_sign)
 
 # # urllib.request.urlretrieve(url, "local-filename.jpg")
 
-# with open('sample.jpg', 'wb') as f:
-#     f.write('url.content')
-
 # URL of the image to be downloaded
-# IMAGE_URL = "https://smrghsh.github.io/360img/images/test.png"
+IMAGE_URL = "https://smrghsh.github.io/360img/images/test.png"
 
-# # Open the image from the URL
-# response = requests.get(IMAGE_URL)
+# Open the image from the URL
+response = requests.get(IMAGE_URL)
 
-# # Save the image to a file
-# with open("image.jpg", "wb") as f:
-#     f.write(response.content)
+# Save the image to a file
+with open("image.jpg", "wb") as f:
+    f.write(response.content)
