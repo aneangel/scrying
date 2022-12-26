@@ -1,5 +1,5 @@
- gmaps-dl
+# gmaps-dl
 
-### gmapsdl.py
+#### gmapsdl.py
 -----------
 Internal tool to download street view images from google maps
