@@ -1,4 +1,4 @@
-# secrets.py hosts API keys required for google maps API requests
+# secrets.py (this is a local file and user will need to generate their own API/URL keys) hosts API keys required for google maps API requests
 from secrets import API_key
 # not needed and can be unsigned but if user prefers secrets.py also hosts signature key,
 # encountered errors using URL signature
