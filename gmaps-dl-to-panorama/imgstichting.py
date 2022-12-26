@@ -1,8 +1,13 @@
+# Python script to stitch static images into one equi-rectangular image for VR use code is from Nicolai Nielsen
+# https://www.youtube.com/watch?v=Zs51cg4mb0k, only significant changes are having final image go from png -> jpg
+# will recommit when I update script to save images into a separate folder titled output-stitched
+
 import numpy as np
 import cv2
 import glob
 import imutils
 
+# this file path will be different for every user make sure to change to corresponding file path to use without error
 image_paths = glob.glob("C:/Users/lalo/360img/gmaps-dl/images/*.jpg")
 images = []
 
@@ -63,7 +68,6 @@ if not error:
     cv2.imshow("Stitched Image Processed", stitched_img)
 
     cv2.waitKey(0)
-
 
 else:
     print("Images could not be stitched!")
