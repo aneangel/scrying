@@ -1,4 +1,4 @@
-# Scrying.py
+# scrying.py
 -------------------------
 set of python utilities to download Google Maps Street View images 
 and stitch into spherical equi-rectangular projection for WebXR display.
