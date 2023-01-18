@@ -19,3 +19,17 @@ For more information go [Here](https://cloud.google.com/api-keys/docs/create-man
 ## Installing Dependencies
 -------------------------
 
+```
+pip install numpy
+pip install imutils
+pip install opencv-python
+```
+
+## Usage steps
+-------------------------
+
+1. Download source images at given latitude and longitude using Google Maps Street View API
+```python3 scrying.py 37.123901238 1209380.234144```
+2. Stitch the source images into an equirectangular projection using [OpenCV](https://pypi.org/project/opencv-python/)
+```python3 scryingTogether.py```
+
