@@ -1,10 +1,13 @@
-# secrets.py (this is a local file and user will need to generate their own API/URL keys) hosts API keys required for google maps API requests
-from key import API_key
-# not needed and can be unsigned but if user prefers secrets.py also hosts signature key,
-# encountered errors using URL signature
-
 
 # required imports for this python script
+
+# secrets.py hosts API keys required for google maps API requests
+from key import API_key
+# # not needed and can be unsigned but if user prefers secrets.py also hosts signature key,
+# # encountered errors using URL signature
+# from secrets import URL_sign
+
+# # required imports for this python script
 import requests
 import time
 import os
@@ -19,12 +22,14 @@ if not os.path.exists(folder_path):
 else:
     print(f"Sub-folder {folder_name} already exists in {current_dir}")
 
+
 # location variables in terms of longitude and latitude needed for the Google Maps API parameters
+
 lat, lng = 37.907921, -122.6869581
 pitch = 0
-
-# step stops 45 before so 360 + 45, iterative loop to update the heading parameter
-# to pull a full set of static images totaling 360 degrees for image stitching
+#
+# # step stops 45 before so 360 + 45, iterative loop to update the heading parameter
+# # to pull a full set of static images totaling 360 degrees for image stitching
 for h in range(0, 405, 45):
     heading = h
     url = "https://maps.googleapis.com/maps/api/streetview?size=600x300&location={1},{2}&heading={3}&pitch=-0.76&key={0}".format(
