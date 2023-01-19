@@ -1,14 +1,33 @@
-# Python script to stitch static images into one equi-rectangular image for VR use code is from Nicolai Nielsen
-# https://www.youtube.com/watch?v=Zs51cg4mb0k, only significant changes are having final image go from png -> jpg
-# will recommit when I update script to save images into a separate folder titled output-stitched
+# # Python script to stitch static images into one equi-rectangular image for VR use code is from Nicolai Nielsen
+# # https://www.youtube.com/watch?v=Zs51cg4mb0k, only significant changes are having final image go from png -> jpg
+# # will recommit when I update script to save images into a separate folder titled output-stitched
+#
+import os
 
 import numpy as np
 import cv2
 import glob
 import imutils
+import getpass
 
-# this file path will be different for every user make sure to change to corresponding file path to use without error
-image_paths = glob.glob("C:/Users/lalo/360img/gmaps-dl/images/*.jpg")
+# #
+username = getpass.getuser()
+file_path = "C:/Users/{0}/scrying/images/*.jpg".format(username)
+
+
+def list_subfolders(folder_path):
+    subfolders = [f.path for f in os.scandir(folder_path) if f.is_dir()]
+    return subfolders
+
+
+keyWord = 'images'
+
+folder_path = 'C:/Users/lalo/scrying'
+subfolders = list_subfolders(folder_path)
+
+
+# # this file path will be different for every user make sure to change to corresponding file path to use without error
+image_paths = glob.glob("C:/Users/lalo/scrying/images/*.jpg")
 images = []
 
 for image in image_paths:

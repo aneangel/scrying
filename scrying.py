@@ -1,14 +1,25 @@
 # secrets.py (this is a local file and user will need to generate their own API/URL keys) hosts API keys required for google maps API requests
-from secrets import API_key
+from key import API_key
 # not needed and can be unsigned but if user prefers secrets.py also hosts signature key,
 # encountered errors using URL signature
-from secrets import URL_sign
+
 
 # required imports for this python script
 import requests
 import time
+import os
 
-# location variables in terms of longitude and latitude needed for the google maps API parameters
+folder_name = "images"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+folder_path = os.path.join(current_dir, folder_name)
+
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
+    print(f"successfully saved images in sub-folder {folder_name} in {current_dir}.")
+else:
+    print(f"Sub-folder {folder_name} already exists in {current_dir}")
+
+# location variables in terms of longitude and latitude needed for the Google Maps API parameters
 lat, lng = 37.907921, -122.6869581
 pitch = 0
 
