@@ -5,7 +5,7 @@ Set of python utilities to download Google Maps Street View images and stitch in
 ## Setup
 -------------------------
 First, set up an API key through [Google Cloud Platform](https://cloud.google.com/api-keys/docs/get-started-api-keys)
-Once done, change `secrets.py` to the appropriate key assigned to you.
+Once done, change `API.py` to the appropriate key assigned to you.
 
 ```
 API_key = 'your GCP Google maps key here'
