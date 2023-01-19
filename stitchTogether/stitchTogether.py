@@ -22,12 +22,12 @@ def list_subfolders(folder_path):
 
 keyWord = 'images'
 
-folder_path = 'C:/Users/lalo/scrying'
+folder_path = 'C:/Users/{0}/scrying'.format(username)
 subfolders = list_subfolders(folder_path)
 
 
 # # this file path will be different for every user make sure to change to corresponding file path to use without error
-image_paths = glob.glob("C:/Users/lalo/scrying/images/*.jpg")
+image_paths = glob.glob("C:/Users/{0}/scrying/images/*.jpg".format(username))
 images = []
 
 for image in image_paths:
