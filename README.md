@@ -37,7 +37,7 @@ pip install opencv-python
 
 ### Footnotes
 -------------------------
-After running ```python3 scrying.py``` images folder will be created in the following file path ```'C:\Users\Username\scrying\images'```
+After running ```python3 scrying.py``` images folder will be created in the following file path ```'\Users\Username\scrying\images'```
 
 * note python scripts use numpy as a dependencies when creating a file for your API keys, avoid naming or using "secrets.py" 
 as anaconda3/Lib/secrets.py can (and probably will) get overwritten. Numpy relies on files in this directory called random.py and secrets.py so if you have files with those names numpy will not load.
