@@ -2,6 +2,8 @@
 -------------------------
 Set of python utilities to download Google Maps Street View images and stitch into spherical equirectangular projection for WebXR display.
 
+![alt text](https://github.com/aneangel/scrying/blob/main/stitchTogether/stitchedOutputProcessed.jpg)
+
 ## Setup
 -------------------------
 First, set up an API key through [Google Cloud Platform](https://cloud.google.com/api-keys/docs/get-started-api-keys)
