@@ -27,7 +27,7 @@ pip install opencv-python
 
 ## Usage steps
 -------------------------
-1. git clone repository into following directory ```'C:\Users\Username\'``` 
+1. git clone repository into following directory ```'\Users\Username\'``` 
 2. Download source images at given latitude and longitude using Google Maps Street View API run:
 ```python3 scrying.py```
 3. Stitch the source images into an equi-rectangular projection using [OpenCV](https://pypi.org/project/opencv-python/) run:
